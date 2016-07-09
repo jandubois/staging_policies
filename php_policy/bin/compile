@@ -1,0 +1,10 @@
+#!/bin/bash
+
+set +o pipefail
+if find $1 | grep -q .php$; then
+   echo "We have a zero tolerance policy about PHP here:"
+   find $1 | grep .php$
+   exit 1
+fi
+
+exit 0

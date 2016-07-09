@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DATE=$(date)
+echo Timestamp: $DATE
+
+mkdir -p "$1/.profile.d"
+echo "export TIMESTAMP='$DATE'" > $1/.profile.d/timestamp_policy.sh
+
+exit 0
